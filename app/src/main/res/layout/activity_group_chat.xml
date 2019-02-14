@@ -47,15 +47,14 @@
         android:layout_alignParentLeft="true">
         <EditText
             android:id="@+id/input_group_message"
-            android:layout_width="360dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="Write your message..."
             android:padding="17dp"/>
         <ImageButton
             android:id="@+id/send_message_button"
             android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/send_message"/>
-
+            android:layout_height="match_parent"
+            android:src="@drawable/send"/>
     </LinearLayout>
 </RelativeLayout>
