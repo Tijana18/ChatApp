@@ -30,7 +30,6 @@
         android:textAlignment="center"
         android:drawableStart="@drawable/edit_profile"
         android:drawableLeft="@drawable/edit_profile"
-        android:textColor="@color/colorPrimaryDark"
         android:background="@drawable/button1"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
@@ -38,7 +37,7 @@
         android:layout_marginTop="10dp"
         android:textColorHint="@android:color/background_light"
         android:textStyle="italic"
-        />
+        android:textColor="@android:color/background_light" />
 
     <EditText
         android:id="@+id/set_profile_status"
@@ -52,12 +51,12 @@
         android:textAlignment="center"
         android:drawableStart="@drawable/edit_status"
         android:drawableLeft="@drawable/edit_status"
-        android:textColor="@color/colorPrimaryDark"
         android:background="@drawable/button2"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:padding="6dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/background_light"/>
 
     <Button
         android:id="@+id/update_settings_button"
