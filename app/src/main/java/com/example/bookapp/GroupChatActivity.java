@@ -64,6 +64,8 @@ public class GroupChatActivity extends AppCompatActivity {
             public void onClick(View v) {
                 SaveMessageInfoToDatabase();
                 userMessageInput.setText("");
+
+                mScrollView.fullScroll(ScrollView.FOCUS_DOWN);
             }
         });
     }
@@ -109,7 +111,7 @@ public class GroupChatActivity extends AppCompatActivity {
     private void InitializeFields(){
         mToolBar = (Toolbar) findViewById(R.id.group_chat_bar_layout);
         setSupportActionBar(mToolBar);
-        getSupportActionBar().setTitle("Group Name");
+        getSupportActionBar().setTitle(currentGroupName);
 
         SendMessageButton = (ImageButton) findViewById(R.id.send_message_button);
         userMessageInput = (EditText) findViewById(R.id.input_group_message);
@@ -158,7 +160,6 @@ public class GroupChatActivity extends AppCompatActivity {
             messageInfoMap.put("date", currentDate);
             messageInfoMap.put("time", currentTime);
             GroupMessageKeyRef.updateChildren(messageInfoMap);
-
         }
     }
 
@@ -174,6 +175,8 @@ public class GroupChatActivity extends AppCompatActivity {
 
             displayTextMessages.append(chatName + " : \n" + chatMessage + " : \n"
             + chatTime + "     " + chatDate + " \n\n\n");
+
+            mScrollView.fullScroll(ScrollView.FOCUS_DOWN);
         }
     }
 }

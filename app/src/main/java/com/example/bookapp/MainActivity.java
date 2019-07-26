@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Toolbar mToolBar;
     private ViewPager myViewPager;
-    private TabLayout myTabLayoout;
+    private TabLayout myTabLayout;
     private TabsAccessorAdapter myTabsAccessorAdapter;
 
     private FirebaseUser currentUser;
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         RootRef = FirebaseDatabase.getInstance().getReference();
 
 
-        mToolBar = (Toolbar) findViewById(R.id.main_page_toolbar);
+        mToolBar = findViewById(R.id.main_page_toolbar);
         setSupportActionBar(mToolBar);
         getSupportActionBar().setTitle("BookApp");
 
@@ -56,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
         myTabsAccessorAdapter = new TabsAccessorAdapter(getSupportFragmentManager());
         myViewPager.setAdapter(myTabsAccessorAdapter);
 
-        myTabLayoout = (TabLayout) findViewById(R.id.main_tabs);
-        myTabLayoout.setupWithViewPager(myViewPager);
+        myTabLayout = (TabLayout) findViewById(R.id.main_tabs);
+        myTabLayout.setupWithViewPager(myViewPager);
     }
 
     @Override
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         if (item.getItemId() == R.id.main_find_friends_option){
-
+            SendUserToFindFriendsActivitu();
         }
 
         return true;
@@ -175,5 +175,10 @@ public class MainActivity extends AppCompatActivity {
         settingsIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(settingsIntent);
         finish();
+    }
+
+    private void SendUserToFindFriendsActivitu() {
+        Intent findFriendIntent = new Intent(MainActivity.this, FindFriendsActivity.class);
+        startActivity(findFriendIntent);
     }
 }

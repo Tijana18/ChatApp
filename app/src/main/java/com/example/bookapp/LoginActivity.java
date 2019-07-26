@@ -2,6 +2,7 @@ package com.example.bookapp;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.v4.widget.CircularProgressDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -48,6 +49,15 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 AllowUserToLogin();
+            }
+        });
+
+        PhoneLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent PhoneLoginIntent = new Intent(LoginActivity.this, PhoneLoginActivity.class);
+                startActivity(PhoneLoginIntent);
             }
         });
     }
