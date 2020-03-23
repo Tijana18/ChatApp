@@ -60,9 +60,26 @@
         android:textColor="@android:color/black"
         android:background="@drawable/button2"
         android:textStyle="bold"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:text="Send message"
         android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/decline_message_request_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/send_message_request_button"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="65dp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/button2"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Cancel Chat Request"
+        android:textAllCaps="false"
+        android:visibility="invisible"
         />
 
 

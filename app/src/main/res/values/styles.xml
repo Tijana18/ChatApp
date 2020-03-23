@@ -9,4 +9,9 @@
     </style>
 
     <style name="AlertDialog" parent="Base.Theme.AppCompat.Light.Dialog"></style>
+
+    <style name="contacts_list">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
 </resources>
